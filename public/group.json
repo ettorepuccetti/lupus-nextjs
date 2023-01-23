@@ -1,0 +1,56 @@
+[
+  {
+    "id": 0,
+    "name": "Lupo",
+    "slug": "lupo",
+    "bio": "Durante la fase della notte, il moderatore chiama i lupi, i quali dopo aver aperto gli occhi ed essersi riconosciuti, si accordano in silenzio su quale giocatore sbranare."
+  },
+  {
+    "id": 1,
+    "name": "Villico",
+    "slug": "villico",
+    "bio": "I villici sono gli abitanti di Tabula, i quali hanno a disposizione il giorno per identificare i lupi e votare per il linciaggio."
+  },
+  {
+    "id": 2,
+    "name": "Veggente",
+    "slug": "veggente",
+    "bio": "Il Veggente(9): e' un umano che puo' conoscere l'identita' di un altro giocatore ancora in vita. All'inizio della notte (seconda in poi), il moderatore chiama la sua fase, il veggente apre gli occhi e indica (a scelta) uno tra i giocatori rimasti vivi: il moderatore gli rivela (con un cenno del capo) se è un Lupo mannaro o no."
+  },
+  {
+    "id": 3,
+    "name": "Criceto mannaro",
+    "slug": "criceto_mannaro",
+    "bio": "Il Criceto Mannaro (15): ai fini del termine della partita e per il medium è considerato un umano. Se è visto nella notte dal Veggente, muore insieme allo sbranato. Il criceto mannaro non appartiene a nessuna fazione: gioca solo per se stesso. Il criceto mannaro non può essere sbranato dai lupi mannari: se è scelto durante la notte, non è sbranato nessuno. Il criceto mannaro è l'unico vincitore se è ancora vivo quando la partita termina."
+  },
+  {
+    "id": 4,
+    "name": "Indemoniato",
+    "slug": "indemoniato",
+    "bio": "L'Indemoniato (10): è un umano, ma parteggia per i lupi mannari... senza però sapere chi siano! Pertanto vince se vincono i lupi mannari."
+  },
+  {
+    "id": 5,
+    "name": "Massone",
+    "slug": "massone",
+    "bio": "I Massoni (13): sono due umani che conoscono reciprocamente il ruolo dell'altro. Solo durante la prima notte, infatti, il moderatore chiama anche i Massoni i quali aprono gli occhi e si riconoscono. I Massoni vanno aggiunti al mazzo sempre in coppia, e non singolarmente."
+  },
+  {
+    "id": 6,
+    "name": "Medium",
+    "slug": "medium",
+    "bio": "Il Medium (9): è un umano che può mettersi in contatto con i fantasmi. All'inizio della notte (seconda in poi), il moderatore chiama la sua fase e con un cenno del capo gli dice “sì” se la persona linciata nel turno precedente era un lupo mannaro, “no” altrimenti."
+  },
+  {
+    "id": 7,
+    "name": "Guardia del Corpo",
+    "slug": "guardia-del-corpo",
+    "bio": "La Guardia del corpo (11): è un umano che ogni notte protegge una persona a sua scelta. Durante la notte (dalla seconda in poi) prima della fase dei lupi mannari, il moderatore chiama la Guardia del corpo e questi gli indica una persona a scelta. La Guardia del corpo non può scegliere se stesso! La persona indicata è protetta dai lupi mannari. Se quella persona è poi scelta anche dai lupi mannari come vittima, non muore e nella fase della notte nessuno è sbranato."
+  },
+  {
+    "id": 8,
+    "name": "Gufo",
+    "slug": "gufo",
+    "bio": "Il Gufo (12): è un umano. Durante ogni notte, il moderatore chiama la fase del Gufo, il quale indica una persona. Durante il giorno, dopo che tutti hanno votato, il moderatore annuncia il nome di chi è stato “gufato”. Il “gufato” entra di diritto tra i giocatori indiziati, insieme alla prima persona con più voti. Se la persona gufata era indiziata, il voto del Gufo non cambia nulla. Se il giocatore “gufato” durante la notte non era un Mannaro (Lupo o Criceto), muore all'inizio del giorno. In questo modo, potrebbero essere uccisi due giocatori nella stessa notte:"
+  }
+]
