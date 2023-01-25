@@ -1,8 +1,6 @@
 import Image from "next/image"
-import { useRouter } from "next/router";
 import fsPromises from 'fs/promises'
 import path from 'path'
-import type { InferGetStaticPropsType, GetStaticProps } from 'next'
 import Link from "next/link";
 
 
