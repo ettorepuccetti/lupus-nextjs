@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import fsPromises from 'fs/promises'
 import path from 'path'
 import type { InferGetStaticPropsType, GetStaticProps } from 'next'
+import Link from "next/link";
 
 
 type CastMember = {
@@ -13,8 +14,6 @@ type CastMember = {
 }
 
 export default function MemberArticle ( {member}: any) {
-  // const member = props.member
-
   return (
     <article>
       <hgroup>
@@ -37,6 +36,9 @@ export default function MemberArticle ( {member}: any) {
         </div>
         <p>{member.bio}</p>
       </hgroup>
+      <div style={{display: "flex", justifyContent: "center"}}>
+        <Link role="button" href="/" className="outline"> Back </Link>
+      </div>
     </article>
   )
 }
