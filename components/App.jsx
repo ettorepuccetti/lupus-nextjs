@@ -5,6 +5,7 @@ import Modal from './Modal';
 import GameDescription from './GameDescription';
 import Nav from './Nav';
 import Image from 'next/image';
+import groupImg from "../public/images/group.png"
 
 function App({cast}) {
   const [memberInfo, setMemberInfo] = useState(null)
@@ -14,7 +15,7 @@ function App({cast}) {
       <Nav cast={cast} onChoice={(info) => setMemberInfo(info)}/>
       <div className="container">
         <hgroup>
-          <Image width={700} height={300} src="/images/group.png" alt="Lupus Group" className="container" />
+          <Image src={groupImg} alt="Lupus Group" className="container" placeholder="blur"/>
           <h1>Lupus in <i>Tabula</i></h1>
           <h2>Descrizione del gioco</h2>
           <GameDescription />
