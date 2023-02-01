@@ -1,8 +1,11 @@
+import Image from "next/image"
+import logoImg from "../public/images/logo.png"
+
 export default function Nav ({cast, onChoice}) {
     return (
         <nav className="container">
           <ul>
-              <img src="images/logo.png" alt="logo" style={{height: "40px"}}/>
+              <Image src={logoImg} alt="logo" style={{height: "40px", width: "auto"}}/>
           </ul>
           <ul>
             <li>

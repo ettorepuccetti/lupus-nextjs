@@ -17,7 +17,6 @@ function App({cast}) {
         <hgroup>
           <Image src={groupImg} alt="Lupus Group" className="container" placeholder="blur"/>
           <h1>Lupus in <i>Tabula</i></h1>
-          <h2>Descrizione del gioco</h2>
           <GameDescription />
           <h2>Personaggi</h2>
           <p>clicca su un personaggio per aprire la descrizione</p>
