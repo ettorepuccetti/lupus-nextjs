@@ -3,7 +3,6 @@ import Link from "next/link";
 import Head from "next/head";
 import { CastMember, readGroupJson } from "../lib/readGroupJson"
 
-
 export default function MemberArticle ( {member}: {member: CastMember}) {
   return (
     <>
@@ -39,16 +38,24 @@ export default function MemberArticle ( {member}: {member: CastMember}) {
   )
 }
 
+let objectData: CastMember[] | any = null;
+
+async function getGroupJsonOnce() {
+  if (!objectData) {
+    objectData = await readGroupJson();
+  }
+  return objectData;
+}
 
 
 export async function getStaticPaths() {
-  const objectData: CastMember[] = await readGroupJson();
+  const objectData: CastMember[] = await getGroupJsonOnce();
   return {
     paths: 
       objectData.map( member => {
         return {
           params: {
-            member: member.name,
+            memberName: member.name,
           },
         }
       }),
@@ -57,8 +64,8 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps ( {params}: any) {
-  const objectData: CastMember[] = await readGroupJson();
-  const member : CastMember | undefined = objectData.find((member: CastMember) => member.name === params.member)
+  const objectData: CastMember[] = await getGroupJsonOnce();
+  const member : CastMember | undefined = objectData.find((member: CastMember) => member.name === params.memberName)
   return {
     props: {
       member: member
