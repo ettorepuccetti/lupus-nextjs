@@ -8,10 +8,11 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
 import { createTheme, ThemeProvider} from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
+import MenuIcon from '@mui/icons-material/Menu';
+import { CastMember } from '../lib/readGroupJson';
+import Link from 'next/link';
+import Image from 'next/image';
 
 const darkTheme = createTheme({
   palette: {
@@ -19,7 +20,7 @@ const darkTheme = createTheme({
   },
 });
 
-export default function SwipeableTemporaryDrawer() {
+export default function SwipeableTemporaryDrawer( {cast} : {cast: CastMember[]}) {
   const [state, setState] = React.useState(false);
 
   const toggleDrawer = (open: boolean) =>
@@ -32,7 +33,6 @@ export default function SwipeableTemporaryDrawer() {
       ) {
         return;
       }
-
       setState(open);
     };
 
@@ -44,31 +44,20 @@ export default function SwipeableTemporaryDrawer() {
       onKeyDown={toggleDrawer(false)}
     >
       <List>
-        {['MENU voice 1'].map((text: string) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton
-              onClick={() => console.log(text)}>
-              <ListItemIcon>
-                <InboxIcon />
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
+        {cast.map((member: CastMember) => (
+          <ListItem key={member.id} disablePadding>
+            <Link href={member.name} style={{color: "white"}}>
+              <ListItemButton>
+                <ListItemIcon>
+                  <Image width={28} height={28} alt={member.name} src={`/icons/${member.slug}.svg`}/>
+                </ListItemIcon>
+                <ListItemText primary={member.name} />
+              </ListItemButton>
+            </Link>
           </ListItem>
         ))}
       </List>
       <Divider />
-      <List>
-        {['MENU voice 2'].map((text: string) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                <MailIcon />
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
     </Box>
   );
   
@@ -78,7 +67,9 @@ export default function SwipeableTemporaryDrawer() {
         {
           <ThemeProvider theme={darkTheme}>
             <React.Fragment>
-              <Button  onClick={toggleDrawer(true)}>MENU</Button>
+              <Button  onClick={toggleDrawer(true)}>
+                <MenuIcon />
+              </Button>
               <SwipeableDrawer
                 anchor={'left'}
                 open={state}

@@ -8,7 +8,9 @@ export default function NavLink ({cast} : {cast: CastMember[]}) {
     return (
         <nav className="container">
           <ul>
-            <li><Drawer></Drawer></li>
+            <li>
+              <Drawer cast={cast}/>
+            </li>
           </ul>
           <ul>
             <Link href={'/'}>
