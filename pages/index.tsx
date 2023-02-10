@@ -1,25 +1,26 @@
 import Head from 'next/head'
-import App from '../components/App'
-import { readGroupJson } from '../lib/readGroupJson'
+import CastHome from '../components/CastHome'
+import { CastMember, readGroupJson } from '../lib/readGroupJson'
 
 
-export default function Home(props: any) {
+const Home = ({members}: {members: CastMember} ) => {
   return (
     <>
       <Head>
         <title>Lupus in Tabula</title>
       </Head>
-      <App cast={props.members}/>
+      <CastHome cast={members}/>
     </>
   )
 }
 
-export async function getStaticProps() {
-  const objectData = await readGroupJson()
+export default Home;
 
+export async function getStaticProps() {
+  const castMembersList: CastMember[] = await readGroupJson();
   return {
     props: {
-      members: objectData
+      members: castMembersList
     }
-  }
+  };
 }

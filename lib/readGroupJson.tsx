@@ -8,9 +8,12 @@ export type CastMember = {
   bio: string
 }
 
-export async function readGroupJson() {
+export function readGroupJson() : Promise<CastMember[]> {
   const filePath = path.join(process.cwd(), "public/", "group.json");
-  const jsonData = await fsPromises.readFile(filePath, "utf-8");
-  const objectData : CastMember[] = JSON.parse(jsonData);
-  return objectData;
+
+  const dataPromise: Promise<CastMember []> = fsPromises.readFile(filePath, "utf-8")
+    .then( (data: string) => { return JSON.parse(data); })
+    .then( (data : CastMember[]) => {return data; })
+
+  return dataPromise;
 }
