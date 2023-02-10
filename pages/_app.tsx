@@ -1,6 +1,6 @@
 import type { AppProps } from 'next/app'
-import '@picocss/pico';
 import { DataProvider } from '../components/DataContext';
+import '@picocss/pico';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
