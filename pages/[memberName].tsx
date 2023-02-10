@@ -6,8 +6,13 @@ import "@picocss/pico/css/pico.min.css";
 
 export default function MemberArticle ( {member, cast}: {member: CastMember, cast: CastMember[]}) {
   
-  const nextIndex: number = (cast.findIndex((element: CastMember) => element.name === member.name)+1) % cast.length;
+  const currentIndex: number = cast.findIndex((element: CastMember) => element.name === member.name);
+  
+  const nextIndex: number = ((currentIndex)+1) % cast.length;
   const nextMember: string = cast[nextIndex].name;
+  
+  const prevIndex: number = ((currentIndex + cast.length)-1) % cast.length;
+  const prevMember: string = cast[prevIndex].name;
 
   return (
     <>
@@ -15,7 +20,7 @@ export default function MemberArticle ( {member, cast}: {member: CastMember, cas
         <title>{`Lupus in Tabula - ${member.name}`}</title>
       </Head>
       <NavLink cast={cast}/>
-      <Member member={member} nextMember={nextMember}/>
+      <Member member={member} nextMember={nextMember} prevMember={prevMember}/>
     </>
   )
 }

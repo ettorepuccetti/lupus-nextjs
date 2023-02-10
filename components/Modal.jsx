@@ -36,10 +36,12 @@ export default function Modal({ member, handleClose, handleNext, handlePrev}) {
           </div>
           <p>{member.bio}</p>
         </hgroup>
-        <div style={{display: "flex", justifyContent: "space-evenly"}}>
-          <a role="button" href="#" className="outline" onClick={() => handlePrev()}> Prev </a>
-          <a role="button" href="#" className="outline" onClick={() => handleNext()}> Next </a>
-        </div>
+        <footer>
+          <div style={{display: "flex", justifyContent: "space-evenly"}}>
+            <a role="button" href="#" className="outline" onClick={() => handlePrev()}> Prev </a>
+            <a role="button" href="#" className="outline" onClick={() => handleNext()}> Next </a>
+          </div>
+        </footer>
       </article>
     </dialog>
   )

@@ -29,8 +29,10 @@ function CastHome({cast}) {
               handleNext={() => setMemberInfo(cast[(cast.indexOf(memberInfo) + 1) % cast.length])}
             />
           }
-          <hr />
-          <p> <small> Made with ❤️ by EP </small></p>
+          <footer>
+            <hr />
+            <p> <small> Made with ❤️ by EP </small></p>
+          </footer>
         </hgroup>
       </div>
       <DarkSwitch />

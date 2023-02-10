@@ -2,9 +2,10 @@ import Image from "next/image"
 import Link from "next/link"
 import HomeIcon from '@mui/icons-material/Home';
 import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded';
+import ArrowBackIosRoundedIcon from '@mui/icons-material/ArrowBackIosRounded';
 import { CastMember } from "../lib/readGroupJson"
 
-export default function Member ( {member, nextMember}: {member: CastMember, nextMember: string} ) {
+export default function Member ( {member, nextMember, prevMember}: {member: CastMember, nextMember: string, prevMember: string} ) {
   
   return (
     <>
@@ -29,11 +30,12 @@ export default function Member ( {member, nextMember}: {member: CastMember, next
             alt={member.name} />
         </div>
         <p>{member.bio}</p>
-      </hgroup>
-      <div style={{display: "flex", justifyContent: "space-evenly"}}>
-        <Link role="button" href="/" className="secondary"> <HomeIcon/> </Link>
-        <Link role="button" href={`${nextMember}`} as={`${nextMember}`} className="secondary"> <ArrowForwardIosRoundedIcon/> </Link>
-      </div>
+        <div style={{display: "flex", justifyContent: "space-evenly"}}>
+          <Link href={`${prevMember}`}  className="secondary outline"> <ArrowBackIosRoundedIcon fontSize="large"/> </Link>
+          <Link href="/"  className="secondary outline"> <HomeIcon fontSize="large"/> </Link>
+          <Link href={`${nextMember}`} className="secondary outline"> <ArrowForwardIosRoundedIcon fontSize="large"/> </Link>
+        </div>
+      </hgroup>      
     </>
   )
 }

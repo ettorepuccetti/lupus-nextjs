@@ -7,17 +7,17 @@ import Drawer from "./Drawer"
 export default function NavLink ({cast} : {cast: CastMember[]}) {
     return (
         <nav className="container">
-          <ul>
+          <ul style={{ flex: 1, marginRight: 'auto'}}>
             <li>
               <Drawer cast={cast}/>
             </li>
           </ul>
           <ul>
             <Link href={'/'}>
-              <Image src={logoImg} alt="logo" style={{height: "40px", width: "auto"}}/>
+              <Image src={logoImg} alt="logo" style={{height: "40px", width: "auto", flex: 1, display: 'flex', justifyContent: 'center'}}/>
             </Link>
           </ul>
-          <ul>
+          <ul style={{ flex: 1, display: 'flex', marginLeft: 'auto', justifyContent:"flex-end"}}>
             <li>
               <details role="list" dir="rtl">
                 {/*eslint-disable-next-line jsx-a11y/role-supports-aria-props*/}
