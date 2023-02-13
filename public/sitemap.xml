@@ -4,11 +4,58 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
 
 <url>
   <loc>https://www.lupusintabula.com/</loc>
-  <lastmod>2023-01-11T21:31:22+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2023-02-13T19:49:02+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://www.lupusintabula.com/Lupo</loc>
+  <lastmod>2023-02-13T19:49:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.lupusintabula.com/Villico</loc>
+  <lastmod>2023-02-13T19:49:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.lupusintabula.com/Veggente</loc>
+  <lastmod>2023-02-13T19:49:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.lupusintabula.com/Criceto%20mannaro</loc>
+  <lastmod>2023-02-13T19:49:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.lupusintabula.com/Indemoniato</loc>
+  <lastmod>2023-02-13T19:49:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.lupusintabula.com/Massone</loc>
+  <lastmod>2023-02-13T19:49:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.lupusintabula.com/Medium</loc>
+  <lastmod>2023-02-13T19:49:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.lupusintabula.com/Guardia%20del%20Corpo</loc>
+  <lastmod>2023-02-13T19:49:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.lupusintabula.com/Gufo</loc>
+  <lastmod>2023-02-13T19:49:02+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 
 
