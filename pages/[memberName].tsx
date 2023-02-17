@@ -17,7 +17,7 @@ export default function MemberArticle ( {member, cast}: {member: CastMember, cas
   return (
     <>
       <Head>
-        <title>{`Lupus in Tabula - ${member.name}`}</title>
+        <title>{`${member.name}`}</title>
       </Head>
       <NavLink cast={cast}/>
       <Member member={member} nextMember={nextMember} prevMember={prevMember}/>
