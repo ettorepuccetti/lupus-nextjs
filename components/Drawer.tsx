@@ -8,11 +8,12 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import { createTheme, ThemeProvider} from '@mui/material/styles';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
 import { CastMember } from '../lib/readGroupJson';
 import Link from 'next/link';
 import Image from 'next/image';
+import { LoginButton } from './loginButton';
 
 const darkTheme = createTheme({
   palette: {
@@ -20,7 +21,7 @@ const darkTheme = createTheme({
   },
 });
 
-export default function SwipeableTemporaryDrawer( {cast} : {cast: CastMember[]}) {
+export default function SwipeableTemporaryDrawer({ cast }: { cast: CastMember[] }) {
   const [state, setState] = React.useState(false);
 
   const toggleDrawer = (open: boolean) =>
@@ -44,12 +45,13 @@ export default function SwipeableTemporaryDrawer( {cast} : {cast: CastMember[]})
       onKeyDown={toggleDrawer(false)}
     >
       <List>
+        <LoginButton />
         {cast.map((member: CastMember) => (
           <ListItem key={member.id} disablePadding>
-            <Link href={member.name} style={{color: "white"}}>
+            <Link href={member.name} style={{ color: "white" }}>
               <ListItemButton>
                 <ListItemIcon>
-                  <Image width={28} height={28} alt={member.name} src={`/icons/${member.slug}.svg`}/>
+                  <Image width={28} height={28} alt={member.name} src={`/icons/${member.slug}.svg`} />
                 </ListItemIcon>
                 <ListItemText primary={member.name} />
               </ListItemButton>
@@ -60,14 +62,14 @@ export default function SwipeableTemporaryDrawer( {cast} : {cast: CastMember[]})
       <Divider />
     </Box>
   );
-  
+
   return (
     <>
       <div>
         {
           <ThemeProvider theme={darkTheme}>
             <React.Fragment>
-              <Button  onClick={toggleDrawer(true)}>
+              <Button onClick={toggleDrawer(true)}>
                 <MenuIcon />
               </Button>
               <SwipeableDrawer

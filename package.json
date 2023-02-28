@@ -23,6 +23,11 @@
     "next": "13.1.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "typescript": "4.9.4"
+    "typescript": "4.9.4",
+    "thin-backend": ">= 0.9.0",
+    "thin-backend-react": ">= 0.9.0"
+  },
+  "devDependencies": {
+    "@types/thin-backend": "https://thin.dev/types/32ca7961-d793-4964-940b-d6c80dd5de5b/mpDMMHwTayZlmhwSTYcFxKtVddBqMLxm"
   }
 }
