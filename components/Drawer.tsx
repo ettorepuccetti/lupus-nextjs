@@ -13,7 +13,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { CastMember } from '../lib/readGroupJson';
 import Link from 'next/link';
 import Image from 'next/image';
-import { LoginButton } from './loginButton';
+import { LoginButton } from './LoginButton';
 
 const darkTheme = createTheme({
   palette: {
